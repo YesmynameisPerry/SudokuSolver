@@ -1,0 +1,7 @@
+test.py
+*__pycache__/
+.idea
+.DS_Store
+test.csv
+testBlanks.csv
+testSingleChar.csv

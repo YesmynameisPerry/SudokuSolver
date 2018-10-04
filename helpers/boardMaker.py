@@ -1,4 +1,3 @@
-
 __all__ = ["makeBoardFromCsv"]
 
 def _allPossibilities():

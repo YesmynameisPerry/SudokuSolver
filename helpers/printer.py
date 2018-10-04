@@ -35,7 +35,7 @@ def _prettify(listOfNine):
             listOfNine[cell] = " "
         if type(listOfNine[cell]) == list and len(listOfNine[cell]) == 1:
             listOfNine[cell] = str(listOfNine[cell][0])
-            printError("You're prettifying things in helpers.printer._prettify without squishing")
+            printError("You're prettifying things in helpers.printer._prettify without minimizing")
         else:
             listOfNine[cell] = str(listOfNine[cell])
     return listOfNine

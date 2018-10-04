@@ -3,7 +3,6 @@ __all__ = ["getSquare", "getRow", "getColumn", "putSquare", "putColumn", "putRow
 from math import floor
 
 # get functions return a section of the board as a copy
-
 def getSquare(pos, board):
     acceptedValues = [0, 1, 2, 3, 4, 5, 6, 7, 8]
     if not pos in acceptedValues:
@@ -36,7 +35,6 @@ def getColumn(pos, board):
     return [board[n][pos] for n in acceptedValues]
 
 # put functions overwrite the board at the position with the input
-
 def putSquare(pos, square, board):
     acceptedValues = [0, 1, 2, 3, 4, 5, 6, 7, 8]
     if not pos in acceptedValues:

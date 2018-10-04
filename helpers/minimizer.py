@@ -3,8 +3,6 @@ from helpers.sectionHelper import *
 
 __all__ = ["minimize", "squash"]
 
-from helpers.sectionHelper import getSquare, getRow, getColumn
-
 # takes a board, sets all final values to final position
 def minimize(board):
     for row in range(9):
