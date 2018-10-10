@@ -4,7 +4,7 @@ from helpers.minimizer import *
 from helpers.printer import *
 from copy import deepcopy
 
-board = makeBoardFromCsv("test.csv")
+board = makeBoardFromCsv("board.csv")
 
 printBoard(board)
 
