@@ -14,6 +14,7 @@ while True:
     oldBoard = deepcopy(board)
     board = squash(board)
     board = minimize(board)
+    board = squish(board)
     if board == oldBoard:
         break
 
