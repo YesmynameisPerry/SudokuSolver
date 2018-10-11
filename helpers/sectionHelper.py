@@ -1,4 +1,4 @@
-__all__ = ["getSquare", "getRow", "getColumn", "putSquare", "putColumn", "putRow"]
+__all__ = ["getSquare", "getRow", "getColumn", "putSquare", "putColumn", "putRow", "getFunctions","putFunctions"]
 
 from math import floor
 
@@ -67,3 +67,6 @@ def putColumn(pos, column, board):
     for n in acceptedValues:
         board[n][pos] = column[n]
     return board
+
+getFunctions = [getSquare, getColumn, getRow]
+putFunctions = [putSquare, putColumn, putRow]

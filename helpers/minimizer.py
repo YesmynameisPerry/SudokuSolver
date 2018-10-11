@@ -33,15 +33,13 @@ def _squashSegment(board, getFunction, segment):
 def squash(board):
     board = deepcopy(board)
     for segment in range(9):
-        board = _squashSegment(board, getSquare, segment)
-        board = _squashSegment(board, getRow, segment)
-        board = _squashSegment(board, getColumn, segment)
+        for getFunction in getFunctions:
+            board = _squashSegment(board, getFunction, segment)
     return board
 
 # takes a board, for each cell sets a value if it only appears as a possibility once in a row/column/square
 def squish(board):
     for segment in range(9):
-        board = _squishSegment(board, (getSquare, putSquare), segment)
-        board = _squishSegment(board, (getColumn, putColumn), segment)
-        board = _squishSegment(board, (getRow, putRow), segment)
+        for i in range(3):
+            board = _squishSegment(board, (getFunctions[i], putFunctions[i]), segment)
     return board

@@ -1,22 +1,14 @@
 # -*- coding: utf-8 -*-
 from helpers.boardMaker import *
-from helpers.minimizer import *
 from helpers.printer import *
-from copy import deepcopy
+from wrappers.solver import *
+from helpers.validator import *
 
 board = makeBoardFromCsv("board.csv")
 
 printBoard(board)
 
-board = minimize(board)
-
-while True:
-    oldBoard = deepcopy(board)
-    board = squash(board)
-    board = minimize(board)
-    board = squish(board)
-    if board == oldBoard:
-        break
+board = simpleSolve(board)
 
 printBoard(board)
-
+print("Board solved:",validateBoard(board))
