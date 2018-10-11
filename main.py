@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from helpers.boardMaker import *
-from helpers.printer import *
+from wrappers.printer import *
 from wrappers.solver import *
 from helpers.validator import *
 

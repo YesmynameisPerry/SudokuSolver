@@ -1,4 +1,4 @@
-from helpers.printer import printError
+from wrappers.printer import printError
 from helpers.sectionHelper import getFunctions
 
 __all__ = ["validateBoard"]
