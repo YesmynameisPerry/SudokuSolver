@@ -8,7 +8,8 @@ board = makeBoardFromCsv("board.csv")
 
 printBoard(board)
 
-board = simpleSolve(board)
+
+board = complexSolve(board)
 
 printBoard(board)
-print("Board solved:",validateBoard(board))
+print("Board solved:", validateBoard(board))
