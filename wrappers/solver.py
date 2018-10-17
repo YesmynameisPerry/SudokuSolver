@@ -18,6 +18,7 @@ def simpleSolve(board):
 def complexSolve(board):
     board = simpleSolve(board)
     if validateBoard(board): return board
+    if containsMultiples(board) or containsBlanks(board): return board
     undecidedCells = [(board[rowIndex][cellIndex], rowIndex, cellIndex) for rowIndex in range(len(board)) for cellIndex in range(len(board[rowIndex])) if type(board[rowIndex][cellIndex]) == list]
     for cell in undecidedCells:
         for valueIndex in range(len(cell[0])):

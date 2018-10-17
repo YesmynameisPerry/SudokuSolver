@@ -2,7 +2,7 @@ from traceback import print_stack
 from time import sleep
 from copy import deepcopy
 
-__all__ = ["printBoard", "printRow"]
+__all__ = ["printBoard", "printRow", "printPercent"]
 
 top = " "+("___ "*3+" ")*3
 mid = ("|ˍˍˍ"*3+"|")*3
@@ -43,3 +43,12 @@ def _prettify(listOfNine):
 def printRow(row):
     row = _prettify(deepcopy(row))
     print(lef + cen.join(row[:3]) + big + cen.join(row[3:6]) + big + cen.join(row[6:]) + rig)
+
+def printPercent(board):
+    total = 81.0
+    count = 1.0
+    for row in board:
+        for cell in row:
+            if type(cell) == str:
+                count += 1
+    print("Current percent:", round(100*count/total, 3))
