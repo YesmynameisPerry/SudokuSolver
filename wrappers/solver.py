@@ -18,7 +18,12 @@ def simpleSolve(board):
 def complexSolve(board):
     board = simpleSolve(board)
     if validateBoard(board): return board
-    undecidedCells = [board[rowIndex][cellIndex] for rowIndex in range(board) for cellIndex in range(len(board[rowIndex])) if type(cell) == list]
-    print("Undecided Cells", undecidedCells)
-    undecidedCells[0] = "3"
+    undecidedCells = [(board[rowIndex][cellIndex], rowIndex, cellIndex) for rowIndex in range(len(board)) for cellIndex in range(len(board[rowIndex])) if type(board[rowIndex][cellIndex]) == list]
+    for cell in undecidedCells:
+        for valueIndex in range(len(cell[0])):
+            possibleValue = cell[0][valueIndex]
+            tempBoard = deepcopy(board)
+            tempBoard[cell[1]][cell[2]] = possibleValue
+            tempBoard = complexSolve(tempBoard)
+            if validateBoard(tempBoard): return tempBoard
     return board
