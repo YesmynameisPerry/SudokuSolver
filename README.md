@@ -18,4 +18,8 @@ ok.
 
 ### it done?
 
-no.
+yes. unless it bugs out in which case no.
+
+### you accept cookies?
+
+yes.
